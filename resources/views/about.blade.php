@@ -3,61 +3,24 @@
 
 
    @section('content') 
-    <!-- About Section -->
-    <section class="py-5 mt-5">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-5 mb-4 mb-lg-0">
-                    <img src="{{ asset('assets/images/about.jpg') }}" alt="About Me" class="img-fluid rounded-circle">
-                </div>
-                <div class="col-lg-7">
-                    <h2 class="display-5 mb-4">About Me</h2>
-                    <p class="lead">I'm a passionate web developer with over 15 years of experience creating beautiful and functional websites.</p>
-                    <p>My journey in web development began when I was studying computer science at university. Since then, I've worked with numerous clients from various industries, helping them establish their online presence.</p>
-                    <p>I specialize in front-end development using modern technologies like HTML5, CSS3, JavaScript, and frameworks like Bootstrap and React. I also have experience with back-end technologies including Node.js and PHP.</p>
-                    <div class="row mt-4">
-                        <div class="col-md-6">
-                            <ul class="list-unstyled">
-                                <li class="mb-2"><strong>Name:</strong> Md Tamzidul Islam</li>
-                                <li class="mb-2"><strong>Email:</strong> md.tamzidulislam@ymail.com</li>
-                                <li class="mb-2"><strong>Phone:</strong>01715853444</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-6">
-                            <ul class="list-unstyled">
-                                <li class="mb-2"><strong>Experience:</strong> 15+ Years</li>
-                                <li class="mb-2"><strong>Location:</strong> Dhaka, Bangladesh</li>
-                                <li class="mb-2"><strong>Freelance:</strong> Available</li>
-                            </ul>
+   @include('partials.header')
+   <section class="bg-light py-5">
+                <div class="container px-5">
+                    <div class="row gx-5 justify-content-center">
+                        <div class="col-xxl-8">
+                            <div class="text-center my-5">
+                                <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">About Me</span></h2>
+                                <p class="lead fw-light mb-4">My name is Start Bootstrap and I help brands grow.</p>
+                                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit dolorum itaque qui unde quisquam consequatur autem. Eveniet quasi nobis aliquid cumque officiis sed rem iure ipsa! Praesentium ratione atque dolorem?</p>
+                                <div class="d-flex justify-content-center fs-2 gap-4">
+                                    <a class="text-gradient" href="#!"><i class="bi bi-twitter"></i></a>
+                                    <a class="text-gradient" href="#!"><i class="bi bi-linkedin"></i></a>
+                                    <a class="text-gradient" href="#!"><i class="bi bi-github"></i></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <a href="{{ route('contact') }}" class="btn btn-primary mt-3">Contact Me</a>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-5">My Skills</h2>
-            <div class="row">
-            <?php
-                
-                foreach($mySkills as $mySkill) 
-                {
+            </section>
             
-            ?>
-                <div class="col-md-6 mb-4">
-                    <h5>{{ $mySkill['title'] }}</h5>
-                    <div class="progress">
-                        <div class="progress-bar bg-success" style="width: 95%">{{ $mySkill['progress'] }}</div>
-                    </div>
-                </div>
-                <?php } ?>
-               
-            </div>
-        </div>
-    </section>
-
     @endsection
